@@ -26,14 +26,25 @@ function setup() {
 
 function draw() {
     background(0);
+
+    let next = make2DArray(rows, cols);
+
     for (let i=0; i<rows; i++) {
         for (let j=0; j<cols; j++) {
             x = i * resolution;
             y = j * resolution;
             if (grid[i][j] == 1) {
                 fill(255);
-                rect(x,y, resolution, resolution);
+                rect(x,y, resolution-1, resolution-1);
             }
         }
     }
+
+    for (let i=0; i<rows; i++) {
+        for (let j=0; j<cols; j++) {
+        
+        }
+    }
+
+    grid = next;
 }
